@@ -85,6 +85,7 @@ public class OwnerRestControllerTests {
     	ownerWithPet.setAddress("110 W. Liberty St.");
     	ownerWithPet.setCity("Madison");
     	ownerWithPet.setTelephone("6085551023");
+        ownerWithPet.setAtivo("S");
     	ownerWithPet.addPet(getTestPetWithIdAndName(ownerWithPet, 1, "Rosy"));
     	owners.add(ownerWithPet);
 
@@ -94,7 +95,8 @@ public class OwnerRestControllerTests {
     	owner.setLastName("Davis");
     	owner.setAddress("638 Cardinal Ave.");
     	owner.setCity("Sun Prairie");
-    	owner.setTelephone("6085551749");
+        owner.setTelephone("6085551749");
+        owner.setAtivo("S");
     	owners.add(owner);
 
     	owner = new Owner();
@@ -103,7 +105,8 @@ public class OwnerRestControllerTests {
     	owner.setLastName("Rodriquez");
     	owner.setAddress("2693 Commerce St.");
     	owner.setCity("McFarland");
-    	owner.setTelephone("6085558763");
+        owner.setTelephone("6085558763");
+        owner.setAtivo("S");
     	owners.add(owner);
 
     	owner = new Owner();
@@ -112,7 +115,8 @@ public class OwnerRestControllerTests {
     	owner.setLastName("Davis");
     	owner.setAddress("563 Friendly St.");
     	owner.setCity("Windsor");
-    	owner.setTelephone("6085553198");
+        owner.setTelephone("6085553198");
+        owner.setAtivo("S");
     	owners.add(owner);
     }
 
@@ -264,6 +268,7 @@ public class OwnerRestControllerTests {
         updatedOwner.setAddress("110 W. Liberty St.");
         updatedOwner.setCity("Madison");
         updatedOwner.setTelephone("6085551023");
+        updatedOwner.setAtivo("S");
         ObjectMapper mapper = new ObjectMapper();
         String newOwnerAsJSON = mapper.writeValueAsString(updatedOwner);
         this.mockMvc.perform(put("/api/owners/" + ownerId)
@@ -290,6 +295,7 @@ public class OwnerRestControllerTests {
         updatedOwner.setAddress("110 W. Liberty St.");
         updatedOwner.setCity("Madison");
         updatedOwner.setTelephone("6085551023");
+        updatedOwner.setAtivo("S");
     	ObjectMapper mapper = new ObjectMapper();
     	String newOwnerAsJSON = mapper.writeValueAsString(updatedOwner);
     	this.mockMvc.perform(put("/api/owners/" + ownerId)
@@ -318,6 +324,7 @@ public class OwnerRestControllerTests {
         updatedOwner.setAddress("110 W. Liberty St.");
         updatedOwner.setCity("Madison");
         updatedOwner.setTelephone("6085551023");
+        updatedOwner.setAtivo("S");
         ObjectMapper mapper = new ObjectMapper();
         String newOwnerAsJSON = mapper.writeValueAsString(updatedOwner);
         this.mockMvc.perform(put("/api/owners/" + ownerId)
