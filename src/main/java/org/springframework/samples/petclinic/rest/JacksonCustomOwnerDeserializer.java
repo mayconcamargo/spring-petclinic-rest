@@ -50,6 +50,7 @@ public class JacksonCustomOwnerDeserializer extends StdDeserializer<Owner> {
 		String address = node.get("address").asText(null);
 		String city = node.get("city").asText(null);
 		String telephone = node.get("telephone").asText(null);
+		String ativo = node.get("ativo").asText(null);
 		if (node.hasNonNull("id")) {
 			owner.setId(node.get("id").asInt());
 		}
@@ -57,7 +58,8 @@ public class JacksonCustomOwnerDeserializer extends StdDeserializer<Owner> {
         owner.setLastName(lastName);
         owner.setAddress(address);
         owner.setCity(city);
-        owner.setTelephone(telephone);
+		owner.setTelephone(telephone);
+		owner.setAtivo(ativo);
 		return owner;
 	}
 
