@@ -88,6 +88,7 @@ public abstract class AbstractClinicServiceTests {
         owner.setAddress("4, Evans Street");
         owner.setCity("Wollongong");
         owner.setTelephone("4444444444");
+        owner.setAtivo("S");
         this.clinicService.saveOwner(owner);
         assertThat(owner.getId().longValue()).isNotEqualTo(0);
 
